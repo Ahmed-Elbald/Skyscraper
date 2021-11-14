@@ -1,0 +1,166 @@
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    font-size: 1.3rem;
+}
+i {
+    cursor: pointer;
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+:root {
+    --iden-gray: rgb(67, 69, 71);
+    --iden-yellow: #ffeb00;
+}
+.parent {
+    width: 90%;
+    height: 500px;
+    margin: 20px auto;
+    background-image: url(../images/skyscraper.jpg) , linear-gradient(to right, gray , gray);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-position: center;
+}
+.parent  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parent > .t-l {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    padding: 15px 10px;
+    height: 50px;
+    background-color: var(--iden-gray);
+}
+.parent > .b-l {
+    position: absolute;
+    top: calc(5% + 50px);
+    left: 5%;
+    padding: 15px 10px;
+    height: 50px;
+    background-color: white;
+    color: var(--iden-gray);
+    z-index: 4;
+}
+.parent > .b-r {
+    position: absolute;
+    bottom: calc(25% + 50px);
+    right: 5%;
+    padding: 15px 10px;
+    height: 50px;
+    background-color: white;
+    color: var(--iden-gray);
+    z-index: 5;
+}
+.parent > .t-r {
+    position: absolute;
+    bottom: 25%;
+    right: 5%;
+    padding: 15px 10px;
+    height: 50px;
+    background-color: var(--iden-yellow);
+    z-index: 5;
+}
+.parent i {
+    font-size: 3rem;
+}
+.details-cont {
+    position: absolute;
+    top: 6%;
+    right: 6%;
+    width: 85%;
+    height: 300px;
+}
+.phone {
+    height: 250px;
+    width: 25%;
+    background-color: var(--iden-gray);
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    z-index: 3;
+}
+.laptop {
+    height: 320px;
+    width: 30%;
+    background-color: var(--iden-yellow);
+    border-radius: 50%;
+    position: absolute;
+    top: 8%;
+    left: 25%;
+    color: var(--iden-gray);
+    z-index: 2;
+}
+.settings {
+    height: 270px;
+    width: 28%;
+    background-color: var(--iden-gray);
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    right: 25%;
+}
+.light {
+    height: 250px;
+    width: 25%;
+    background-color: var(--iden-yellow);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 5%;
+}
+@media (max-width: 750px) {
+    .parent {
+        height: 210vh;
+    }
+    * {
+        font-size: 1rem;
+    }
+    .parent i {
+        font-size: 2.5rem;
+    }
+    .details-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: fit-content;
+    }
+    .details-cont > div {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    .parent > .b-r {
+        bottom: calc(1% + 50px);
+    }
+    .parent > .t-r {
+        bottom: 1%;
+    }
+    .parent > .t-l {
+        top: 1%;
+    }
+    .parent > .b-l {
+        top: calc(1% + 50px);
+    }
+}
